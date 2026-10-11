@@ -1,0 +1,13 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+logs/
+plugins/
+config/
+.env
+data/
+great_expectations/uncommitted/
+.vscode/
+.DS_Store
