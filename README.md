@@ -1,0 +1,9 @@
+pandas==2.2.1
+requests==2.31.0
+sqlalchemy==2.0.28
+psycopg2-binary==2.9.9
+great-expectations==0.18.12
+jupyter==1.0.0
+matplotlib==3.8.3
+seaborn==0.13.2
+python-dotenv==1.0.1
