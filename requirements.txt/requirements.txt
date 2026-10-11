@@ -1,0 +1,9 @@
+pandas
+requests
+sqlalchemy
+psycopg2-binary
+great-expectations
+matplotlib
+seaborn
+jupyter
+python-dotenv
