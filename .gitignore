@@ -1,13 +1,7 @@
-venv/
+data/raw/*.csv
+data/processed/*.sqlite
 .venv/
-__pycache__/
-*.pyc
+_pycache_/
 .ipynb_checkpoints/
-logs/
-plugins/
-config/
-.env
-data/
-great_expectations/uncommitted/
-.vscode/
+*.pyc
 .DS_Store
