@@ -60,6 +60,25 @@ El pipeline implementa de forma automatizada **tres tareas distintas de extracci
 * Python 3.11 o 3.12 instalado.
 * Git para control de versiones.
 
+# Informe Técnico Integrado - Siniestralidad Vial en Santiago de Cali
+
+## 1. Objetivos Refinados y ODS
+El pipeline de datos analiza la accidentalidad vial en Santiago de Cali para dar cumplimiento directo a:
+* **ODS 3:** Salud y Bienestar (Reducción de muertes y lesiones por tráfico).
+* **ODS 11:** Ciudades y Comunidades Sostenibles (Seguridad en el sistema de transporte).
+
+## 2. Arquitectura de Ingesta (3 Fuentes)
+El sistema extrae datos mediante un DAG de Apache Airflow estructurado en tres fuentes independientes:
+1. **Fuente 1 (CSV):** Consolidado histórico de homicidios por condición de víctima.
+2. **Fuente 2 (API):** Conexión en tiempo real con endpoints de datos abiertos de Cali (`datos.cali.gov.co`).
+3. **Fuente 3 (CSV Masivo):** Registro detallado de incidentes viales (>10,000 registros).
+
+## 3. Almacenamiento y Modelo Relacional (SQLite)
+Los datos validados y limpios se almacenan de forma local en `data/processed/accidentes.sqlite`, estructurados bajo un modelo de tablas normalizadas y hechos que permiten consultas analíticas eficientes mediante SQL.
+
+## 4. Hallazgos del EDA y V de Cramér
+Mediante el análisis en Jupyter Notebooks, se aplicaron pruebas estadísticas de asociación categórica (V de Cramér), evidenciando correlaciones significativas entre las comunas de ocurrencia y la gravedad de los siniestros viales.
+
 ### Instrucciones de Instalación y Ejecución (PowerShell / Linux)
 
 1. **Clonar el repositorio y abrir la terminal en la raíz:**
